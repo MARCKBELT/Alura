@@ -13,11 +13,13 @@
     
 
     <script>
-        var secreto =5;
+        var secreto =Math.round(Math.random()*10);
         var input = document.querySelector("input");
-
+        input.focus();
         function verificar (){
             (parseInt(input.value)===secreto)?alert("Acerto0"): alert("no acerto");
+            input.value="";
+            input.focus();
         }
 
         var button = document.querySelector("button");
